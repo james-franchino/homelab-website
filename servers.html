@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Meet Destiny and Daedalus, the two servers in James's home lab."
+    />
+    <title>The Servers | Inside My Home Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+      <div class="container">
+        <p class="site-title">Inside My Home Lab</p>
+        <p>Learning Linux by building something useful.</p>
+
+        <nav aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="servers.html" aria-current="page"> The Servers </a>
+            </li>
+            <li><a href="services.html">The Services</a></li>
+            <li><a href="lessons.html">Lessons Learned</a></li>
+            <li><a href="about.html">About Me</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" class="container">
+      <section class="intro" aria-labelledby="servers-heading">
+        <p class="eyebrow">The hardware behind the lab</p>
+        <h1 id="servers-heading">Meet Destiny and Daedalus.</h1>
+        <p>
+          My home lab runs on two servers with different strengths. Destiny
+          focuses on storage and everyday applications. Daedalus gives me a
+          dedicated Linux environment for running services and developing my
+          administration skills.
+        </p>
+      </section>
+
+      <section aria-labelledby="destiny-heading">
+        <h2 id="destiny-heading">Destiny: Storage and everyday services</h2>
+        <p>
+          Destiny runs Unraid, an operating system designed for network storage
+          that can also run applications and virtual machines. It provides a
+          central place for my files and hosts services I use regularly.
+        </p>
+
+        <h3>Hardware at a glance</h3>
+        <ul>
+          <li>Processor: AMD Ryzen 3 3200G</li>
+          <li>Memory: 32 GB RAM</li>
+          <li>Array drives: Four 10 TB hard drives</li>
+          <li>Operating system: Unraid</li>
+          <li>Power protection: CyberPower 1500VA UPS</li>
+        </ul>
+
+        <p>
+          The drives provide 40 TB of combined raw capacity. Usable storage
+          depends on how much capacity is assigned to parity, which helps
+          protect against drive failure. Parity does not replace a separate
+          backup.
+        </p>
+        <p>
+          Destiny runs applications such as Plex for media, Immich for photos,
+          and Paperless-ngx for documents. These services make the server useful
+          beyond experimentation.
+        </p>
+      </section>
+
+      <section aria-labelledby="daedalus-heading">
+        <h2 id="daedalus-heading">Daedalus: A dedicated Linux environment</h2>
+        <p>
+          Daedalus runs Rocky Linux. Working with this server lets me practice
+          managing a Linux system directly, including using the command line,
+          configuring services, and investigating problems.
+        </p>
+
+        <h3>Hardware at a glance</h3>
+        <ul>
+          <li>Processor: AMD Ryzen 9 5900X</li>
+          <li>Memory: 32 GB RAM</li>
+          <li>Graphics card: NVIDIA GeForce RTX 4060 Ti</li>
+          <li>Storage: 500 GB NVMe SSD and 2 TB SSD</li>
+          <li>Operating system: Rocky Linux</li>
+        </ul>
+
+        <p>
+          I use Docker and Docker Compose to run and configure applications on
+          Daedalus. Containers package applications with the dependencies they
+          need, making it easier to manage multiple services on one server.
+        </p>
+        <p>
+          Its workloads include system monitoring, utilities, and local
+          artificial intelligence tools. The graphics card provides additional
+          processing power for compatible AI workloads.
+        </p>
+      </section>
+
+      <section aria-labelledby="network-heading">
+        <h2 id="network-heading">Connecting the lab</h2>
+        <p>
+          An ASUS RT-BE88U router connects the lab to my home network, while a
+          Hitron CODA56 modem provides the connection to my internet service
+          provider. The router allows my computers and other devices to reach
+          the services running on the servers.
+        </p>
+        <p>
+          Networking is part of the learning experience. A running application
+          is only useful if the devices that need it can connect to it reliably.
+        </p>
+      </section>
+
+      <section aria-labelledby="two-servers-heading">
+        <h2 id="two-servers-heading">Why two servers?</h2>
+        <p>
+          The two systems give me different environments to learn from. Destiny
+          combines storage management with useful applications, while Daedalus
+          provides more direct experience administering a dedicated Linux
+          server.
+        </p>
+        <p>
+          Together, they let me explore how hardware, operating systems,
+          networking, and applications work together.
+        </p>
+        <a class="button" href="services.html">Explore the services</a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 James Franchino. Created for CIS 133.</p>
+      </div>
+    </footer>
+  </body>
+</html>

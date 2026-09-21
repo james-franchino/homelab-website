@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore the applications in James's home lab for media, photos, documents, monitoring, and learning."
+    />
+    <title>The Services | Inside My Home Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+      <div class="container">
+        <p class="site-title">Inside My Home Lab</p>
+        <p>Learning Linux by building something useful.</p>
+
+        <nav aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="servers.html">The Servers</a></li>
+            <li>
+              <a href="services.html" aria-current="page"> The Services </a>
+            </li>
+            <li><a href="lessons.html">Lessons Learned</a></li>
+            <li><a href="about.html">About Me</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" class="container">
+      <section class="intro" aria-labelledby="services-heading">
+        <p class="eyebrow">Putting the servers to work</p>
+        <h1 id="services-heading">Useful tools. Practical experience.</h1>
+        <p>
+          The hardware is only part of the lab. The applications running on it
+          help me organize information, enjoy my media, and understand how my
+          systems are performing.
+        </p>
+      </section>
+
+      <section aria-labelledby="hosting-heading">
+        <h2 id="hosting-heading">What does self-hosting mean?</h2>
+        <p>
+          Self-hosting means running an application on a system you manage. In
+          my lab, that means installing and maintaining services on my own
+          servers and accessing them from my other devices.
+        </p>
+        <p>
+          This gives me more control over how those services operate, but it
+          also makes me responsible for updates, configuration, backups, and
+          troubleshooting.
+        </p>
+      </section>
+
+      <section aria-labelledby="everyday-heading">
+        <h2 id="everyday-heading">Everyday applications</h2>
+
+        <div class="card-grid">
+          <article class="card">
+            <h3>Plex</h3>
+            <p>
+              Plex organizes a personal media library and makes it available to
+              compatible devices. I use it to browse and play media stored on
+              Destiny.
+            </p>
+            <p>
+              Running a media server gives me experience with storage, file
+              permissions, and network connectivity.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Immich</h3>
+            <p>
+              Immich provides a place to organize and browse my photos and
+              videos. It helps me bring my personal photo collection together on
+              my own server.
+            </p>
+            <p>
+              Managing it also reminds me that a photo application needs a
+              backup plan for both its files and its database.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Paperless-ngx</h3>
+            <p>
+              Paperless-ngx helps organize digital documents into a searchable
+              collection. It makes finding information easier than searching
+              through folders of individually named files.
+            </p>
+            <p>
+              It is a practical example of using a server to keep everyday
+              information organized.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="management-heading">
+        <h2 id="management-heading">Keeping track of the systems</h2>
+
+        <div class="card-grid">
+          <article class="card">
+            <h3>Uptime Kuma</h3>
+            <p>
+              Uptime Kuma checks whether services are reachable. Its dashboard
+              helps me spot availability problems and see when a service needs
+              attention.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Portainer</h3>
+            <p>
+              Portainer provides a web interface for managing container
+              environments. I use it to inspect containers and manage
+              applications running in Docker.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Grafana and Prometheus</h3>
+            <p>
+              Prometheus collects system metrics, and Grafana displays them in
+              dashboards. Together, they help me understand resource use and
+              notice changes over time.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="ai-heading">
+        <h2 id="ai-heading">Experimenting with local AI</h2>
+        <p>
+          Daedalus also runs Ollama and Open WebUI. Ollama runs supported AI
+          models locally, while Open WebUI provides a browser interface for
+          interacting with them.
+        </p>
+        <p>
+          This part of the lab lets me explore how AI workloads use memory and
+          processing power. It also gives me another application stack to
+          configure and maintain.
+        </p>
+      </section>
+
+      <section aria-labelledby="containers-heading">
+        <h2 id="containers-heading">How Docker fits in</h2>
+        <p>
+          Many of these applications run in Docker containers. A container
+          packages an application with the software dependencies it needs,
+          allowing multiple services to run on the same server.
+        </p>
+        <p>
+          Docker Compose lets me describe an application's configuration in a
+          text file, including its storage and networking settings. Keeping that
+          configuration organized makes the setup easier to understand and
+          maintain.
+        </p>
+        <a class="button" href="lessons.html">Read the lessons learned</a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 James Franchino. Created for CIS 133.</p>
+      </div>
+    </footer>
+  </body>
+</html>

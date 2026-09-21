@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Lessons from James's home lab about troubleshooting, backups, Docker, and Linux administration."
+    />
+    <title>Lessons Learned | Inside My Home Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+      <div class="container">
+        <p class="site-title">Inside My Home Lab</p>
+        <p>Learning Linux by building something useful.</p>
+
+        <nav aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="servers.html">The Servers</a></li>
+            <li><a href="services.html">The Services</a></li>
+            <li>
+              <a href="lessons.html" aria-current="page"> Lessons Learned </a>
+            </li>
+            <li><a href="about.html">About Me</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" class="container">
+      <section class="intro" aria-labelledby="lessons-heading">
+        <p class="eyebrow">Learning through experience</p>
+        <h1 id="lessons-heading">What the lab has taught me.</h1>
+        <p>
+          Building the lab involves more than installing applications. Keeping
+          those applications useful means investigating problems, protecting
+          data, and understanding how the pieces fit together.
+        </p>
+      </section>
+
+      <section aria-labelledby="troubleshooting-heading">
+        <h2 id="troubleshooting-heading">
+          Check where the problem actually starts
+        </h2>
+        <p>
+          After a macOS update, Vivaldi could no longer open some of my local
+          services. The same addresses still worked in Safari. That comparison
+          helped narrow the problem to the browser or its permissions.
+        </p>
+        <p>
+          Checking macOS settings revealed that Vivaldi's local network
+          permission was not enabled, even though I had approved the permission
+          prompt. Enabling it restored access.
+        </p>
+        <h3>The lesson</h3>
+        <p>
+          An unreachable service does not automatically mean the server has
+          failed. Testing from another browser or device can help identify which
+          part of the connection needs attention.
+        </p>
+      </section>
+
+      <section aria-labelledby="backups-heading">
+        <h2 id="backups-heading">Backups are part of running a service</h2>
+        <p>
+          My lab stores photos, documents, and application data that I care
+          about. Protecting that information requires more than keeping the
+          servers running. My backup setup includes scheduled copies of
+          important data and off-site storage.
+        </p>
+        <p>
+          Applications can also depend on more than their visible files. For
+          example, my Immich backup plan includes its database as well as the
+          photo files. Both matter when planning a recovery.
+        </p>
+        <h3>The lesson</h3>
+        <p>
+          A backup plan should identify what needs to be saved and how it would
+          be restored. Drive protection alone cannot cover every situation, such
+          as accidentally deleting a file.
+        </p>
+      </section>
+
+      <section aria-labelledby="configuration-heading">
+        <h2 id="configuration-heading">Configuration details matter</h2>
+        <p>
+          Running applications in Docker involves deciding where their data
+          lives, how they connect to the network, and which settings they need.
+          A container starting successfully is only one part of getting a
+          service working.
+        </p>
+        <p>
+          Docker Compose gives me a place to record these settings.
+          Understanding the configuration helps me troubleshoot a service and
+          see how it connects to the rest of the lab.
+        </p>
+        <h3>The lesson</h3>
+        <p>
+          Copying a configuration is a starting point. Understanding its paths,
+          ports, and settings makes it easier to adapt and maintain.
+        </p>
+      </section>
+
+      <section aria-labelledby="monitoring-heading">
+        <h2 id="monitoring-heading">Monitoring provides useful clues</h2>
+        <p>
+          Tools such as Uptime Kuma, Grafana, and Prometheus help me observe my
+          systems. Availability checks show whether services respond, while
+          metrics show how resources are being used.
+        </p>
+        <p>
+          Logs provide another view by recording events and error messages.
+          Together, these tools give me information to investigate when
+          something behaves unexpectedly.
+        </p>
+        <h3>The lesson</h3>
+        <p>
+          Monitoring does not fix a problem by itself, but it provides evidence
+          that can guide the next troubleshooting step.
+        </p>
+      </section>
+
+      <section aria-labelledby="learning-heading">
+        <h2 id="learning-heading">
+          Practical work gives classroom concepts meaning
+        </h2>
+        <p>
+          Studying Linux introduces commands and concepts. Using them on my own
+          server connects those ideas to actual tasks, such as managing files,
+          checking services, and reading logs.
+        </p>
+        <p>
+          The lab gives me reasons to keep practicing. Each application I
+          maintain creates another opportunity to understand the system
+          supporting it.
+        </p>
+        <a class="button" href="about.html">Learn about my goals</a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 James Franchino. Created for CIS 133.</p>
+      </div>
+    </footer>
+  </body>
+</html>
